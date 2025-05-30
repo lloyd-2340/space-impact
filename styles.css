@@ -1,0 +1,38 @@
+/* Custom styles for Modern SpaceImpact: Omega Edition */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    background-color: #000;
+}
+
+/* Retro-futuristic HUD styles */
+.hud-element {
+    text-shadow: 0 0 5px #00ff00;
+    font-family: 'Courier New', monospace;
+}
+
+/* Power-up effects */
+.power-up-active {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Boss HP bar animation */
+@keyframes bossHpWarning {
+    0% { background-color: #ff0000; }
+    50% { background-color: #ff6666; }
+    100% { background-color: #ff0000; }
+}
+
+.boss-hp-warning {
+    animation: bossHpWarning 1s infinite;
+} 

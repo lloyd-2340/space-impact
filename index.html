@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern SpaceImpact: Omega Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+    <div class="relative w-screen h-screen overflow-hidden">
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+        
+        <!-- HUD Elements -->
+        <div id="hud" class="absolute top-0 left-0 w-full p-4 pointer-events-none">
+            <!-- Energy Bar -->
+            <div class="w-48 h-4 bg-gray-800 rounded-full overflow-hidden">
+                <div id="energyBar" class="h-full bg-green-500 transition-all duration-300" style="width: 100%"></div>
+            </div>
+            
+            <!-- Power Level -->
+            <div id="powerLevel" class="mt-2 text-sm">
+                Power Level: <span class="text-yellow-400">1</span>
+            </div>
+            
+            <!-- Boss HP Bar (hidden by default) -->
+            <div id="bossHpContainer" class="hidden mt-4">
+                <div id="bossName" class="text-center text-lg font-bold text-red-400 mb-1"></div>
+                <div class="w-64 h-6 bg-gray-800 rounded-full overflow-hidden">
+                    <div id="bossHpBar" class="h-full bg-red-500 transition-all duration-300" style="width: 100%"></div>
+                </div>
+                <div id="bossHpText" class="text-center text-xs text-white mt-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="js/constants.js"></script>
+    <script src="js/entities/player.js"></script>
+    <script src="js/entities/enemy.js"></script>
+    <script src="js/entities/orb.js"></script>
+    <script src="js/entities/obstacle.js"></script>
+    <script src="js/gameStage.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html> 
